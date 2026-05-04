@@ -2,7 +2,7 @@
     --primary-blue: #83AED5;
     --secondary-blue: #ffffff;
     --gray: #AEB0B1;
-    --light-gray: #CBCDC5;
+    --light-blue: #7dacc1;
     --accent-brown: #BE6E45;
 }
 
@@ -10,8 +10,15 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: var(--light-gray);
+    background-color: var(--light-blue);
     color: #333;
+}
+
+header#Home {
+    background-image: url('../pictures/main page picture.webp');
+    background-size: cover;
+    background-position: center;
+    color: white;
 }
 
 header {
