@@ -12,6 +12,7 @@ body {
     padding: 0;
     background-color: var(--light-blue);
     color: #333;
+    padding-top: 70px;
 }
 
 header {
@@ -105,7 +106,6 @@ button:hover {
     
     background-size: cover;      
     background-position: center; 
-    margin-top: 55px;
     height: 400px; 
     width: 100%;
     
@@ -206,4 +206,10 @@ button:hover {
   .stat-item {
     width: 100%; 
   }
+}
+
+/*PAGE CONTACT*/
+
+#contact_us{
+    margin-top: 500px;
 }
