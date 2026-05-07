@@ -14,27 +14,22 @@ body {
     color: #333;
 }
 
-header#Home {
-    background-image: url('../pictures/main page picture.webp');
-    background-size: cover;
-    background-position: center;
-    color: white;
-}
-
 header {
     background-color: var(--primary-blue);
-    color: white;
-    padding: 1rem;
     text-align: center;
+    position: fixed;
+    top: 0;          
+    left: 0;         
+    right: 0;        
+    z-index: 9000;
+
 }
 
 .header-top {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
     flex-wrap: wrap;
-    margin-bottom: 1rem;
 }
 
 .logo {
@@ -42,40 +37,8 @@ header {
     width: auto;
 }
 
-@media (max-width: 600px) {
-    .header-top {
-        flex-direction: column;
-    }
-    nav ul {
-        flex-wrap: wrap;
-    }
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-}
-
-nav li {
-    margin: 0 1rem;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-}
-
-nav a:hover {
-    color: var(--accent-brown);
-}
-
 main {
-    max-width: 1200px;
     margin: 0 auto;
-    padding: 2rem;
 }
 
 section {
@@ -88,6 +51,11 @@ section {
 
 h1, h2 {
     color: var(--secondary-blue);
+}
+
+h2 {
+    color: #111111;
+    text-align: center;
 }
 
 footer {
@@ -128,4 +96,114 @@ button {
 
 button:hover {
     background-color: var(--secondary-blue);
+}
+
+
+
+.banniere-hero {
+    background-image: url("../pictures/image bienvenue.avif");
+    
+    background-size: cover;      
+    background-position: center; 
+    margin-top: 55px;
+    height: 400px; 
+    width: 100%;
+    
+    display: flex;
+    align-items: center; 
+    
+    padding-left: 50px; 
+}
+
+.contenu-hero {
+    color: white; 
+    font-family: Arial, sans-serif; 
+}
+
+.contenu-hero h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.contenu-hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.groupe-boutons {
+    display: flex;
+    gap: 15px; 
+}
+
+.bouton {
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px; 
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.btn-blanc {
+    background-color: white;
+    color: #1e3a8a; 
+}
+
+.btn-transparent {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white; 
+}
+
+.btn-transparent:hover{
+    
+}
+
+/* --- Conteneur principal des statistiques --- */
+.stats-container {
+  display: flex;
+  justify-content: space-around; 
+  align-items: center;
+  padding: 60px 20px; 
+  background-color: #ffffff; 
+  border-top: 1px solid #eaeaea; 
+}
+
+/* --- Chaque bloc individuel --- */
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 42px;
+  font-weight: bold;
+  color: #1a56db; 
+  margin-bottom: 10px; 
+}
+
+
+.stat-label {
+  font-size: 16px;
+  color: #666666; 
+}
+
+/* --- Version Mobile et Tablette --- */
+
+@media (max-width: 800px) {
+  .stats-container {
+    flex-wrap: wrap;
+    gap: 40px; 
+  }
+  
+  .stat-item {
+    width: 45%; 
+  }
+}
+
+@media (max-width: 500px) {
+  .stat-item {
+    width: 100%; 
+  }
 }
