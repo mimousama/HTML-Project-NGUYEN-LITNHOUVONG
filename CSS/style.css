@@ -154,9 +154,9 @@ button:hover {
     border: 1px solid white; 
 }
 
-.btn-transparent:hover{
+/* .btn-transparent:hover{
     
-}
+} */
 
 /* --- Conteneur principal des statistiques --- */
 .stats-container {
@@ -210,6 +210,3 @@ button:hover {
 
 /*PAGE CONTACT*/
 
-#contact_us{
-    margin-top: 500px;
-}
