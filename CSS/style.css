@@ -154,9 +154,6 @@ button:hover {
     border: 1px solid white; 
 }
 
-/* .btn-transparent:hover{
-    
-} */
 
 /* --- Conteneur principal des statistiques --- */
 .stats-container {
@@ -205,6 +202,56 @@ button:hover {
 @media (max-width: 500px) {
   .stat-item {
     width: 100%; 
+  }
+}
+
+/* Dernier conteneur de la main page */
+.info-section {
+  background-color: #ffffff;
+  padding: 40px; 
+  margin: 40px auto; 
+  max-width: 1200px;
+  border-radius: 10px; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+
+.flex-container {
+  display: flex;
+  align-items: center; 
+  gap: 40px; 
+}
+
+
+.text-column {
+  flex: 60%; 
+}
+
+.text-column h2 {
+  text-align: left; 
+  margin-top: 0;
+}
+
+.image-column {
+  flex: 40%;
+}
+
+
+.side-image {
+  width: 100%; 
+  height: auto;
+  border-radius: 8px; 
+}
+
+/* --- Version Mobile --- */
+
+@media (max-width: 800px) {
+  .flex-container {
+    flex-direction: column;
+  }
+  
+  .text-column, .image-column {
+    flex: 100%; 
   }
 }
 
