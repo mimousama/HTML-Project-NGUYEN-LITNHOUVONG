@@ -12,6 +12,32 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+// Accordion for programs page
+document.addEventListener('DOMContentLoaded', function () {
+    const headers = document.querySelectorAll('.accordion-header');
+    headers.forEach(function (header) {
+        header.addEventListener('click', function () {
+            const item = header.parentElement;
+            const body = item.querySelector('.accordion-body');
+            const isActive = item.classList.contains('active');
+
+            
+            document.querySelectorAll('.accordion-item').forEach(function (el) {
+                el.classList.remove('active');
+                el.querySelector('.accordion-header').setAttribute('aria-expanded', 'false');
+                el.querySelector('.accordion-body').classList.remove('open');
+            });
+
+            
+            if (!isActive) {
+                item.classList.add('active');
+                header.setAttribute('aria-expanded', 'true');
+                body.classList.add('open');
+            }
+        });
+    });
+});
+
 // Highlight current page in navigation
 const currentPage = window.location.pathname.split('/').pop();
 const navLinks = document.querySelectorAll('nav a');

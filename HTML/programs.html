@@ -3,38 +3,117 @@
 <head>
     <title>EFREI IT Department - Programs</title>
     <link rel="stylesheet" href="../CSS/style.css">
-    <link rel= "stylesheet" href="../CSS/navbar.css">
+    <link rel="stylesheet" href="../CSS/navbar.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
     <header id="Home">
-        <nav>
-                    <nav class="navbar">
-        <div class="logo-container">
-            <img src="../pictures/Logo_Efrei_2022.svg.png" alt="Logo Efrei" class="logo">
-            <span class="logo-text">IT Program</span>
-        </div>
-
-        <ul class="nav-links">
-            <li><a href="../HTML/contact.html">Contact</a></li>
-            <li><a href="../HTML/faculty.html">Faculty</a></li>
-            <li><a href="../HTML/programs.html">Programs</a></li>
-            <li><a href="../HTML/about.html">About</a></li>
-            <li><a href="../HTML/main page.html">Home</a></li>
-        </ul>
-        </nav>     
-    </header>
-    <main>
-        <section class="">
-            <h2>Our Programs</h2>
-            <ul>
-                <li><strong>Bachelor in Computer Science:</strong> A three-year program focusing on foundational knowledge in programming, algorithms, and software engineering.</li>
-                <li><strong>Master in Software Engineering:</strong> An advanced program for developing expertise in software design, development, and management.</li>
-                <li><strong>Master in Cybersecurity:</strong> Specializing in protecting digital assets and understanding cyber threats.</li>
-                <li><strong>PhD in Information Technology:</strong> Research-oriented program for those interested in advancing the field through original research.</li>
+        <nav class="navbar">
+            <div class="logo-container">
+                <img src="../pictures/Logo_Efrei_2022.svg.png" alt="Logo Efrei" class="logo">
+                <span class="logo-text">IT Program</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../HTML/contact.html">Contact</a></li>
+                <li><a href="../HTML/faculty.html">Faculty</a></li>
+                <li><a href="../HTML/programs.html">Programs</a></li>
+                <li><a href="../HTML/about.html">About</a></li>
+                <li><a href="../HTML/main page.html">Home</a></li>
             </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="programs-section">
+            <h2>Our Programs</h2>
+            <p class="programs-intro">Explore our academic programs designed to train the next generation of IT professionals.</p>
+
+            <div class="accordion">
+
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false">
+                        <span class="accordion-label">
+                            <span class="accordion-icon">&#9654;</span>
+                            Bachelor in Computer Science
+                        </span>
+                        <span class="accordion-duration">3 years</span>
+                    </button>
+                    <div class="accordion-body">
+                        <p>A three-year program focusing on foundational knowledge in programming, algorithms, and software engineering.</p>
+                        <ul class="program-details">
+                            <li>Algorithms &amp; Data Structures</li>
+                            <li>Object-Oriented Programming</li>
+                            <li>Web Development</li>
+                            <li>Databases &amp; SQL</li>
+                            <li>Computer Networks</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false">
+                        <span class="accordion-label">
+                            <span class="accordion-icon">&#9654;</span>
+                            Master in Software Engineering
+                        </span>
+                        <span class="accordion-duration">2 years</span>
+                    </button>
+                    <div class="accordion-body">
+                        <p>An advanced program for developing expertise in software design, development, and management.</p>
+                        <ul class="program-details">
+                            <li>Software Architecture &amp; Design Patterns</li>
+                            <li>Agile &amp; DevOps Methodologies</li>
+                            <li>Cloud Computing</li>
+                            <li>Project Management</li>
+                            <li>Advanced Testing &amp; QA</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false">
+                        <span class="accordion-label">
+                            <span class="accordion-icon">&#9654;</span>
+                            Master in Cybersecurity
+                        </span>
+                        <span class="accordion-duration">2 years</span>
+                    </button>
+                    <div class="accordion-body">
+                        <p>Specializing in protecting digital assets and understanding cyber threats in a constantly evolving landscape.</p>
+                        <ul class="program-details">
+                            <li>Network Security &amp; Firewalls</li>
+                            <li>Ethical Hacking &amp; Penetration Testing</li>
+                            <li>Cryptography</li>
+                            <li>Incident Response &amp; Forensics</li>
+                            <li>Security Compliance &amp; Law</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false">
+                        <span class="accordion-label">
+                            <span class="accordion-icon">&#9654;</span>
+                            PhD in Information Technology
+                        </span>
+                        <span class="accordion-duration">3 – 5 years</span>
+                    </button>
+                    <div class="accordion-body">
+                        <p>A research-oriented program for those interested in advancing the field through original contributions to knowledge.</p>
+                        <ul class="program-details">
+                            <li>Research Methodology</li>
+                            <li>Academic Publishing &amp; Peer Review</li>
+                            <li>Advanced Seminars in IT</li>
+                            <li>Doctoral Thesis</li>
+                            <li>International Collaboration</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
         </section>
     </main>
+
     <footer>
         <p>&copy; 2026 EFREI IT Department</p>
     </footer>
