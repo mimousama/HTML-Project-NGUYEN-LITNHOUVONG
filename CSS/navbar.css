@@ -1,50 +1,69 @@
 
 .navbar {
-  display: flex;
-  justify-content: space-between; 
-  align-items: center; 
-  padding: 5px 5px; 
-  background-color: #f4f4f4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    height: 70px;
 }
-
 
 .logo-container {
-  display: flex;
-  align-items: center; 
-  gap: 15px; 
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
 }
-
 
 .logo {
-  height: 60px; 
-  width: auto;
+    height: 50px;
+    width: auto;
 }
-
 
 .logo-text {
-  font-size: 18px;
-  font-weight: bold;
-  color: #0055A4; 
+    font-size: 18px;
+    font-weight: bold;
+    color: #0055A4;
+    letter-spacing: 0.5px;
 }
 
-
 .nav-links {
-  display: flex;
-  list-style: none; 
-  gap: 30px; 
-  margin: 0;
-  padding: 0;
+    display: flex;
+    list-style: none;
+    gap: 4px;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-links a {
-  display: block;
-  padding: 14px 20px;
-  text-decoration: none; 
-  color: rgb(29, 0, 124); 
-  font-size: 16px;
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: #1d007c;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 6px;
+    transition: color 0.2s ease, background-color 0.2s ease;
 }
 
-.nav-links a:hover{
-  background-color: #0055A4;
-  color: aliceblue;
+.nav-links a:hover {
+    color: #0055A4;
+    background-color: #f0f4ff;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 12px 20px;
+        gap: 10px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 4px;
+    }
 }
