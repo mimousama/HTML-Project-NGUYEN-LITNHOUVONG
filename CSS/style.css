@@ -1,6 +1,7 @@
 :root {
     --primary-blue: #83AED5;
     --secondary-blue: #ffffff;
+    --idk-blue: #1e3a8a;
     --gray: #1A1A1A;
     --light-blue: #7dacc1;
     --accent-brown: #BE6E45;
@@ -115,7 +116,7 @@ button {
 }
 
 button:hover {
-    background-color: var(--secondary-blue);
+    background-color: var(--idk-blue);
 }
 
 
