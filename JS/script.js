@@ -172,6 +172,130 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+// CHATBOT
+const chatbotKnowledge = [
+    {
+        keywords: ['hello', 'hi', 'hey', 'good morning', 'good afternoon'],
+        response: "Hello! I'm the EFREI IT Department assistant 👋 Feel free to ask me anything — programs, admission, faculty, campus..."
+    },
+    {
+        keywords: ['register', 'apply', 'admission', 'enroll', 'inscription', 'join', 'how to'],
+        response: "To apply to EFREI, visit the official admissions portal at efrei.fr. You'll need to submit your academic records, a motivation letter, and complete an entrance exam. Applications open every year in the spring."
+    },
+    {
+        keywords: ['contact', 'email', 'phone', 'reach', 'call'],
+        response: "You can reach us at info@efrei.fr or by phone at +33 1 41 23 45 67. You can also use the contact form on our Contact page."
+    },
+    {
+        keywords: ['reputation', 'ranking', 'ranked', 'renowned', 'famous', 'reputed', 'best', 'good school', 'quality'],
+        response: "EFREI is one of France's top 'Grandes Écoles' specializing in digital engineering. It is CTI-accredited and part of Paris-Panthéon-Assas University, combining technical excellence with one of France's most prestigious academic institutions."
+    },
+    {
+        keywords: ['program', 'programs', 'course', 'degree', 'study', 'formation', 'offer'],
+        response: "We offer 4 programs:\n• Bachelor in computer science (3 years)\n• Master in software engineering (2 years)\n• Master in cybersecurity (2 years)\n• PhD in information technology (3–5 years)"
+    },
+    {
+        keywords: ['bachelor', 'undergraduate', 'licence'],
+        response: "The Bachelor in computer science is a 3-year program covering algorithms, programming, web development, databases, and computer networks — the perfect foundation for an IT career."
+    },
+    {
+        keywords: ['software engineering', 'software', 'engineering', 'master se'],
+        response: "The Master in software engineering (2 years) covers software architecture, agile & DevOps methods, cloud computing, and project management."
+    },
+    {
+        keywords: ['cybersecurity', 'cyber', 'security', 'hacking', 'ethical hacker'],
+        response: "The Master in cybersecurity (2 years) trains experts in network security, ethical hacking, cryptography, incident response, and security compliance."
+    },
+    {
+        keywords: ['phd', 'doctorate', 'doctoral', 'thesis', 'research'],
+        response: "The PhD in information technology is a 3 to 5-year research program for those aiming to contribute original knowledge to the IT field through publications and a doctoral thesis."
+    },
+    {
+        keywords: ['faculty', 'professor', 'teacher', 'staff', 'lecturer', 'who teaches'],
+        response: "Our faculty includes:\n• Amir Chachoui — Computer Science\n• Yaovi Soglo — Computer Science\n• Lena Trebaul — Computer Science\n• Nicolas Flasque — Computer Science & Mathematics"
+    },
+    {
+        keywords: ['duration', 'long', 'years', 'how long', 'length'],
+        response: "Program durations: Bachelor (3 years), Master in SE (2 years), Master in Cybersecurity (2 years), PhD (3–5 years)."
+    },
+    {
+        keywords: ['campus', 'location', 'where', 'address', 'villejuif', 'paris'],
+        response: "EFREI is located at 30-32 Avenue de la République, 94800 Villejuif, just south of Paris, easily accessible by metro line 7."
+    },
+    {
+        keywords: ['tuition', 'cost', 'fee', 'price', 'money', 'scholarship', 'financial', 'aid'],
+        response: "For detailed information about tuition fees and available scholarships, please contact us at info@efrei.fr or visit our official website efrei.fr."
+    },
+    {
+        keywords: ['internship', 'work', 'job', 'career', 'employment', 'company', 'partner'],
+        response: "EFREI works with 50+ company partners and has a 95% employment rate among graduates. Internships are integrated into all programs."
+    },
+    {
+        keywords: ['thank', 'thanks', 'merci', 'great', 'perfect', 'helpful'],
+        response: "You're welcome! Don't hesitate to ask if you have more questions 😊"
+    }
+];
+
+function chatbotGetResponse(input) {
+    const text = input.toLowerCase();
+    for (var i = 0; i < chatbotKnowledge.length; i++) {
+        var entry = chatbotKnowledge[i];
+        for (var j = 0; j < entry.keywords.length; j++) {
+            if (text.indexOf(entry.keywords[j]) !== -1) {
+                return entry.response;
+            }
+        }
+    }
+    return "I'm not sure I have an answer for that. You can contact us directly at info@efrei.fr or visit our Contact page for more information.";
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    var toggle   = document.getElementById('chatbot-toggle');
+    var panel    = document.getElementById('chatbot-panel');
+    var closeBtn = document.getElementById('chatbot-close');
+    var input    = document.getElementById('chatbot-input');
+    var sendBtn  = document.getElementById('chatbot-send');
+    var messages = document.getElementById('chatbot-messages');
+
+    if (!toggle) return;
+
+    function addMessage(text, sender) {
+        var msg = document.createElement('div');
+        msg.className = 'chatbot-msg ' + sender;
+        msg.textContent = text;
+        messages.appendChild(msg);
+        messages.scrollTop = messages.scrollHeight;
+    }
+
+    function handleSend() {
+        var text = input.value.trim();
+        if (!text) return;
+        addMessage(text, 'user');
+        input.value = '';
+        setTimeout(function () {
+            addMessage(chatbotGetResponse(text), 'bot');
+        }, 300);
+    }
+
+    toggle.addEventListener('click', function () {
+        var isHidden = panel.hidden;
+        panel.hidden = !isHidden;
+        if (isHidden && messages.children.length === 0) {
+            addMessage("Hello! I'm the EFREI IT Department assistant 👋 How can I help you?", 'bot');
+        }
+    });
+
+    closeBtn.addEventListener('click', function () {
+        panel.hidden = true;
+    });
+
+    sendBtn.addEventListener('click', handleSend);
+
+    input.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter') handleSend();
+    });
+});
+
 // Highlight current page in navigation
 const currentPage = window.location.pathname.split('/').pop();
 const navLinks = document.querySelectorAll('nav a');

@@ -37,6 +37,20 @@
         </nav>
         <p>&copy; 2026 EFREI IT Department</p>
     </footer>
+    <div class="chatbot-widget" id="chatbot-widget">
+        <button class="chatbot-toggle" id="chatbot-toggle" aria-label="Open chat">&#128172;</button>
+        <div class="chatbot-panel" id="chatbot-panel" hidden>
+            <div class="chatbot-header">
+                <span>&#127979; EFREI Assistant</span>
+                <button class="chatbot-close" id="chatbot-close" aria-label="Close chat">&#10005;</button>
+            </div>
+            <div class="chatbot-messages" id="chatbot-messages"></div>
+            <div class="chatbot-input-area">
+                <input type="text" id="chatbot-input" placeholder="Ask a question..." autocomplete="off">
+                <button id="chatbot-send">Send</button>
+            </div>
+        </div>
+    </div>
     <script src="../JS/script.js"></script>
 </body>
 </html>
