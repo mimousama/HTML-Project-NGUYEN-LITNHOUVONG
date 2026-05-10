@@ -66,6 +66,25 @@ footer {
     padding: 1rem;
 }
 
+.footer-nav {
+    margin-bottom: 0.5rem;
+}
+
+.footer-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    opacity: 0.85;
+    transition: opacity 0.2s ease;
+}
+
+.footer-nav a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
 form {
     display: flex;
     flex-direction: column;
